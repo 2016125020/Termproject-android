@@ -1,0 +1,19 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+android:orientation="vertical" android:layout_width="match_parent"
+android:layout_height="match_parent"
+android:background="@color/test">
+
+    <TextView
+        android:id="@+id/gamelose"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#747474"
+        android:gravity="right"
+        android:text="Game lose"
+        android:textAppearance="@style/TextAppearance.AppCompat.Display2"
+        android:textColor="#FFE400"
+        android:layout_marginTop="153dp"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+</RelativeLayout>

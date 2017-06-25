@@ -9,38 +9,55 @@ xmlns:tools="http://schemas.android.com/tools"
 
     <Button
         android:id="@+id/letter"
+        android:textColor="#000000"
+        android:background="#FFE400"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="letter"
-        android:layout_marginTop="97dp"
         android:layout_below="@+id/word"
-        android:layout_alignLeft="@+id/word"
-        android:layout_alignStart="@+id/word" />
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginTop="30dp" />
 
     <Button
         android:id="@+id/word"
+        android:background="#000000"
+        android:textColor="#FFE400"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="word"
-        android:layout_marginRight="23dp"
-        android:layout_marginEnd="23dp"
-        android:layout_alignTop="@+id/wordinput"
+        android:layout_below="@+id/secretWord"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginTop="70dp" />
+
+    <TextView
+        android:id="@+id/secretWord"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:background="#747474"
+        android:gravity="center_horizontal"
+        android:textAppearance="@style/TextAppearance.AppCompat.Display2"
         android:layout_alignParentRight="true"
         android:layout_alignParentEnd="true" />
 
-    <EditText
-        android:id="@+id/wordinput"
-        android:layout_width="wrap_content"
+    <TextView
+        android:id="@+id/bananaview"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:ems="10"
-        android:inputType="textPersonName"
-        android:text="word"
-        android:layout_marginTop="123dp"
-        android:layout_marginRight="26dp"
-        android:layout_marginEnd="26dp"
-        android:layout_alignParentTop="true"
-        android:layout_toLeftOf="@+id/letter"
-        android:layout_toStartOf="@+id/letter" />
+        android:textAppearance="@style/TextAppearance.AppCompat.Display1"
+        android:textColor="#747474"
+
+        android:background="#FFE400"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
+        android:layout_toRightOf="@+id/bananas"
+        android:layout_toEndOf="@+id/bananas" />
+
 
     <EditText
         android:id="@+id/letterinput"
@@ -48,21 +65,61 @@ xmlns:tools="http://schemas.android.com/tools"
         android:layout_height="wrap_content"
         android:ems="10"
         android:inputType="textPersonName"
-        android:text="letter"
+        android:textColor="#FFE400"
+        android:background="#000000"
         android:layout_alignTop="@+id/letter"
-        android:layout_alignLeft="@+id/wordinput"
-        android:layout_alignStart="@+id/wordinput"/>
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
+        android:layout_toRightOf="@+id/letter"
+        android:layout_toEndOf="@+id/letter"
+        android:layout_alignBottom="@+id/letter"
+        android:maxLength="1"/>
 
-    <TextView
-        android:id="@+id/secretWord"
+    <EditText
+        android:id="@+id/wordinput"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="word"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:textColor="#000000"
+        android:background="#FFE400"
+        android:layout_alignBottom="@+id/word"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
+        android:layout_toRightOf="@+id/word"
+        android:layout_toEndOf="@+id/word"
+        android:layout_alignTop="@+id/word" />
+
+    <TextView
+        android:id="@+id/wronglist"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/hintbutton"
+        android:layout_toLeftOf="@+id/letterinput"
         android:textAppearance="@style/TextAppearance.AppCompat.Display2"
-        android:layout_alignParentTop="true"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true"
-        android:layout_marginTop="25dp"
+        android:textColor="#000000" />
+
+    <Button
+        android:id="@+id/hintbutton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="hint"
+        android:background="#000000"
+        android:textColor="#FFE400"
+        android:layout_above="@+id/bananas"
         android:layout_alignParentRight="true"
         android:layout_alignParentEnd="true" />
+
+    <TextView
+        android:id="@+id/bananas"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="banana : "
+        android:textColor="#FFE400"
+        android:background="#747474"
+        android:textAppearance="@style/TextAppearance.AppCompat.Display1"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+
 </RelativeLayout>

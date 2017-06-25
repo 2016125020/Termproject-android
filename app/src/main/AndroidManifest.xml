@@ -18,6 +18,8 @@
         </activity>
         <activity android:name=".HangManActivity"/>
 
+        <activity android:name=".GameWin"/>
+        <activity android:name=".GameLose"/>
     </application>
 
 </manifest>
