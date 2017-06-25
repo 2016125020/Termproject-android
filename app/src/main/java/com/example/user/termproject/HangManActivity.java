@@ -54,12 +54,19 @@ public class HangManActivity extends AppCompatActivity {
             public void onClick(View view) {
                 h.getletter = letterinput.getText().toString();
                 if(h.guessWord()){
-                    bananacount.setText("  " + h.newman.banana);
-                    secretword.setText(h.star_list, 0, h.newman.listsize);
-                    wronglist.setText(h.wrongletterlist, 0, h.wrongcount);
+                    if(h.isfinished()){
+                        Intent intent = new Intent(getApplicationContext(), GameWin.class); // 다음 넘어갈 클래스 지정
+                        startActivity(intent);
+                    }else {
+                        bananacount.setText("  " + h.newman.banana);
+                        secretword.setText(h.star_list, 0, h.newman.listsize);
+                        wronglist.setText(h.wrongletterlist, 0, h.wrongcount);
+                    }
                 }else {
-                    Intent intent = new Intent(getApplicationContext(), GameLose.class); // 다음 넘어갈 클래스 지정
-                    startActivity(intent);
+                    if(h.newman.banana == 0){
+                        Intent intent = new Intent(getApplicationContext(), GameLose.class); // 다음 넘어갈 클래스 지정
+                        startActivity(intent);
+                    }
                 }
             }
         });
@@ -133,8 +140,18 @@ class HangmanGame implements Serializable{
             wrongcount ++;
             newman.banana = newman.banana - 1;
         }
+
         if(newman.banana == 0){
             return false;
+        }
+        return true;
+    }
+
+    public boolean isfinished(){
+        for(int i = 0; i < newman.listsize; i++){
+            if(star_list[i] == '?'){
+                return false;
+            }
         }
         return true;
     }
