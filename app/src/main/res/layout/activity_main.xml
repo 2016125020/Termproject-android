@@ -9,7 +9,7 @@
 
     <TextView
         android:id="@+id/Banana"
-        android:layout_width="398dp"
+        android:layout_width="match_parent"
         android:layout_height="247dp"
         android:background="#747474"
         android:gravity="right|center_vertical"
@@ -18,8 +18,9 @@
         android:textColor="#FFE400"
         tools:layout_editor_absoluteX="-16dp"
         tools:layout_editor_absoluteY="-6dp"
-        android:layout_alignParentRight="true"
-        android:layout_alignParentEnd="true" />
+        android:layout_alignParentTop="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
 
     <Button
         android:id="@+id/startbutton"
@@ -38,16 +39,15 @@
     <Button
         android:id="@+id/button2"
         style="@style/Widget.AppCompat.Button.Colored"
-        android:background = "#000000"
-        android:textColor= "#FFE400"
         android:layout_width="142dp"
         android:layout_height="219dp"
-        android:text="how to"
-        tools:layout_editor_absoluteX="-12dp"
-        tools:layout_editor_absoluteY="353dp"
         android:layout_alignParentBottom="true"
         android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true"
-        android:layout_below="@+id/Banana" />
+        android:layout_below="@+id/Banana"
+        android:background="#000000"
+        android:textColor="#FFE400"
+        tools:layout_editor_absoluteX="-12dp"
+        tools:layout_editor_absoluteY="353dp" />
 
 </RelativeLayout>
